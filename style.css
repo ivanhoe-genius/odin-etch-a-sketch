@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+.new-sketch {
+    display: block;
+    margin: 20px auto;
+}
+
+.container {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.div-element {
+    background-color: black;
+    border: 1px dotted white;
+}
+
+.color-change {
+    background-color: yellow;
+}
