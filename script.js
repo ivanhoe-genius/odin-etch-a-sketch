@@ -1,7 +1,8 @@
 const divContainer = document.querySelector('.container');
 const btnNewSketch = document.querySelector('.new-sketch');
+let memorizedNumberOfDivs = 16;
 
-function createGrid(numberOfDivs = 16) {
+function createGrid(numberOfDivs) {
     for (let i = 0; i < numberOfDivs * numberOfDivs; i++) {
         const divElement = document.createElement('div');
         divElement.classList.add('div-element');
@@ -25,10 +26,13 @@ function createGrid(numberOfDivs = 16) {
     }
 }
 
-createGrid();
+createGrid(memorizedNumberOfDivs);
 
 function enterNumber() {
-    const userInput = prompt('Please enter the number of squares per side for the new grid.\nMax allowed is 100.');
+
+    let userInput = '';
+
+    userInput = prompt('Please enter the number of squares per side for the new grid.\nMax allowed is 100.');
 
     if (userInput === null) {
         return;
@@ -36,12 +40,16 @@ function enterNumber() {
 
     const convertedInput = parseInt(userInput.trim());
 
-    if (!convertedInput || convertedInput < 0 || convertedInput > 100) {
+    if (userInput === '' || !convertedInput || convertedInput < 0 || convertedInput > 100) {
         alert('Please enter a valid number of squares.\nAny value between 1 and 100.');
         enterNumber();
+        return memorizedNumberOfDivs;
+    } else {
+        console.log('else', convertedInput);
+        memorizedNumberOfDivs = convertedInput;
+        return convertedInput;
     }
 
-    return convertedInput;
 }
 
 btnNewSketch.addEventListener('click', () => {
@@ -49,6 +57,5 @@ btnNewSketch.addEventListener('click', () => {
         element.remove();
     });
     createGrid(enterNumber());
-    // console.log(numberOfDivs);
 
 });
