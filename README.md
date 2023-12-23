@@ -6,14 +6,14 @@ Hover over the squares and have fun!
 
 ## Demo
 
-You can try it out [HERE](https://it-drafter.github.io/etch-a-sketch/).
+You can try it out [HERE](https://ivanhoe-genius.github.io/odin-etch-a-sketch/).
 
 ## Run Locally
 
 Download .zip with all included files and folders, or clone the project:
 
 ```bash
-  git clone https://github.com/it-drafter/etch-a-sketch.git
+  git clone https://github.com/ivanhoe-genius/odin-etch-a-sketch.git
 ```
 
 To see the page, simply run the index.html file in your favourite browser.
