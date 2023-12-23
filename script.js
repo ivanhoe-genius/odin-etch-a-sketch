@@ -35,7 +35,7 @@ function enterNumber() {
     userInput = prompt('Please enter the number of squares per side for the new grid.\nMax allowed is 100.');
 
     if (userInput === null) {
-        return;
+        return memorizedNumberOfDivs;
     }
 
     const convertedInput = parseInt(userInput.trim());
